@@ -1,0 +1,33 @@
+// Day 1.3 : Program to find the roots of a quadratic equation?
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a, b, c,   h;
+    float x,y;
+    printf("Enter the value of A: ");
+    scanf("%d", &a);
+    printf("Enter the value of B: ");
+    scanf("%d", &b);
+    printf("Enter the value of C: ");
+    scanf("%d", &c);
+
+    h = (b * b) - (4 * a * c);
+    printf("b^2-4ac = %d\n",h);
+
+    if (h >= 0)
+    {
+
+        x = (float) (-b + sqrt(h)) / (2 * a);
+        y = (float) (-b - sqrt(h)) / (2 * a);
+
+        printf("The Root of the Equation is : %f, %f \n", x, y);
+    }
+    else if (h<0) {
+    printf("ROOTS OF THE QUADRATIC EQUATION ARE IMAGINARY\n");
+    }
+
+    return 0;
+}
