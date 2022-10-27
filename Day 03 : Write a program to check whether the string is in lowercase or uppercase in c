@@ -1,0 +1,21 @@
+// Write a program to check whether the string is in lowercase or uppercase in c ?
+
+#include <stdio.h>
+// ascii value 
+// 97 to 122 is lowercase number
+int main()
+{
+    char ch;
+    printf("Enter the character \n");
+    scanf("%c", &ch);
+
+    if (ch >= 97 && ch <= 122)
+    {
+        printf("It is lowercase");
+    }
+    else
+    {
+        printf("It is not lowercase");
+    }
+    return 0;
+}
