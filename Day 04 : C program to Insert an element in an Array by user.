@@ -1,0 +1,25 @@
+// C program to Insert an element in an Array by user
+#include <stdio.h>
+
+int main()
+{
+#define MAX 100
+    int arr[MAX];
+    int i, size;
+
+    printf("Enter size of the array : ");
+    scanf("%d", &size);
+
+    printf("Enter elements in array : ");
+    for (i = 0; i < size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    printf("Array : ");
+    for (i = 0; i < size; i++)
+    {
+        printf("%d, ", arr[i]);
+    }
+
+    return 0;
+}
