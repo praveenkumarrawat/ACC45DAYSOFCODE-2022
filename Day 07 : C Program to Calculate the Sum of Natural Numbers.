@@ -1,0 +1,19 @@
+// Day 07 : C Program to Calculate the Sum of Natural Numbers.
+#include<stdio.h>
+
+int main(){
+    int i=1, sum=0, n;
+    printf("Enter the value of n : ");
+    scanf("%d", &n);
+    
+
+    // for(i=1; i<=n; i++){
+    //     sum +=i;
+    // }
+    while( i<=n){
+        sum +=i;
+        i++; 
+    }
+    printf("The value of sum upto n terms is %d", sum);
+    return 0;
+}
