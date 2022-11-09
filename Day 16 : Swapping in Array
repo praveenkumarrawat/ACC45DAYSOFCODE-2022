@@ -1,0 +1,24 @@
+//Day 16 : Swapping in Array
+#include<stdio.h>
+
+int main(){
+    int a[2]= {2,3}, temp;
+    printf("Array before swap : ");
+    for(int i =0; i<2;i++){
+    printf(" %d",a[i]);
+        
+    }
+printf("\n");
+    temp = a[0];
+    a[0]=a[1];
+    a[1]=temp;
+    printf("Array after swap : ");
+
+    for(int i =0; i<2;i++){
+    printf(" %d",a[i]);
+        
+    }
+
+
+    return 0;
+}
