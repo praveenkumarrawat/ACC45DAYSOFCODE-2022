@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[] = {1, 2, 3, 4, 2, 7, 2, 5, 5, 8, 8, 3}, n;
+    n = (sizeof(a) / 4);
+    printf("Duplicate values in Array \n"); 
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if (a[i] == a[j])
+            {
+                printf("%d\n", a[j]);
+            }
+        }
+    }
+    return 0;
+}
