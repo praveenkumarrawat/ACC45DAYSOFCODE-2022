@@ -1,0 +1,22 @@
+#include <stdio.h>
+int power(int x, int y);
+int main()
+{
+    int a, b;
+    printf("Enter the value of a : ");
+    scanf("%d", &a);
+    printf("Enter the value of b : ");
+    scanf("%d", &b);
+    printf("The value of a raised to power b = %d", power(a, b));
+
+    return 0;
+}
+int power(int x, int y)
+{
+    int p=1;
+    for (int i = 1; i <= y; i++)
+    {
+        p = p*x;
+    }
+    return p;
+ }
