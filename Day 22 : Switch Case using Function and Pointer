@@ -1,0 +1,76 @@
+// Day 22 : Switch Case using Function and Pointer
+
+ #include <stdio.h>
+int add(int *, int *);
+int sub(int *, int *);
+int multi(int *, int *);
+int div(int *, int *);
+
+int main()
+{
+    int choice, result;
+    int a, b;
+    printf("********** MENU **********\n");
+    printf("1. Addition \n");
+    printf("2. Subtration \n");
+    printf("3. Multiplication \n");
+    printf("4. Division \n");
+
+    printf("Enter your choice : ");
+    scanf("%d", &choice);
+
+    printf("Enter the value of A : ");
+    scanf("%d", &a);
+    printf("Enter the value of B : ");
+    scanf("%d", &b);
+
+    switch (choice)
+    {
+    case 1:
+        result = add(&a, &b);
+        printf("The sum of a and b : %d", result);
+        break;
+    case 2:
+        result = sub(&a, &b);
+        printf("The subtraction of a and b : %d", result);
+
+        break;
+    case 3:
+        result = multi(&a, &b);
+        printf("The Multiplication of a and b : %d", result);
+        break;
+    case 4:
+        result = div(&a, &b);
+        printf("The Division of a by b : %d", result);
+
+        break;
+    default:
+        printf("Wrong Choice !!");
+    }
+
+    return 0;
+}
+int add(int *i, int *j)
+{
+    int k;
+    k = *i + *j;
+    return (k);
+}
+int sub(int *i, int *j)
+{
+    int k;
+    k = *i - *j;
+    return (k);
+}
+int multi(int *i, int *j)
+{
+    int k;
+    k = (*i) * (*j);
+    return (k);
+}
+int div(int *i, int *j)
+{
+    int k;
+    k = (*i) / (*j);
+    return (k);
+}
