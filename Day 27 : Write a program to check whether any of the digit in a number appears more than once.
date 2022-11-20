@@ -1,0 +1,21 @@
+//Write a program to check whether any of the digit in a number appears more than once.
+#include<stdio.h>
+int main(){
+    int n,seen[10]={0},rem;
+    printf("Enter any number : ");
+    scanf("%d", &n);
+    while(n>0){
+        rem=n%10;
+        if(seen[rem]==1){
+            break;
+        }
+        seen[rem]=1;
+        n=n/10;
+    }
+    if(n>0)
+    printf("YES");
+    else 
+    printf("NO");
+    
+    return 0;
+}
