@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int x, y;
+    printf("Enter your marks : ");
+    scanf("%d", &x);
+    printf("Passing Marks Required : ");
+    scanf("%d", &y);
+
+    if (x >= y)
+    {
+        printf("You are PASS");
+    }
+    else
+    {
+        printf("You are FAIL");
+    }
+    return 0;
+}
