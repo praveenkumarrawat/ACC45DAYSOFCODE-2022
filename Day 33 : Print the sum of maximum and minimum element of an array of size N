@@ -1,0 +1,23 @@
+#include<stdio.h>
+#define max 100
+int main(){
+    int a[max],n,i,j,temp,sum;
+    printf("Enter the size of array : ");
+    scanf("%d", &n);
+    printf("Enter element in array : ");
+    for(i=0; i<n;i++){
+        scanf("%d", &a[i]);
+    }
+    for(i=0; i<n;i++){
+        for(j=i+1; j<n;j++){
+            if(a[i]>a[j]){
+                temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+    }
+    sum = a[0]+ a[n-1];
+    printf("Sum : %d",sum);
+    return 0;
+}
