@@ -1,0 +1,16 @@
+#include<stdio.h>
+#define max 100
+int main(){
+    int a[max],n,i,sum=0;
+    printf("Enter the size of array : ");
+    scanf("%d", &n);
+    printf("Enter element in array : ");
+    for(i=0; i<n;i++){
+        scanf("%d", &a[i]);
+        if(a[i]<0){
+            sum+=a[i];
+        }
+    }
+    printf("\nSUM OF NEGATIVE NUMBER : %d",sum);
+    return 0;
+}
