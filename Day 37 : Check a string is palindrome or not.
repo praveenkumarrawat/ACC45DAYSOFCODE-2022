@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+#define max 100
+int main(){
+    char name[max];
+    int i,n,count =0;
+    printf("Enter the name (without space) : ");
+    scanf("%s",&name);
+     n=strlen(name);
+    for(i=0; i<n; i++){
+       if(name[i]!=name[n-i-1]){
+        count++;
+       }
+    }
+    if(count==0){
+        printf("YES, it is palindrome");
+    }
+    else{
+        printf("No, it is not palindrome");
+        
+    }
+    return 0;
+}
