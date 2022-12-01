@@ -1,0 +1,26 @@
+//Searching of element in a arrray 
+#include<stdio.h>
+#define max 100
+int main(){
+    int a[max],n,m,count=0,pos,i;
+    printf("Enter the size of array : ");
+    scanf("%d", &n);
+    printf("Enter the element in a array : ");
+    for(i=0; i<n;i++){
+        scanf("%d", &a[i]);
+    }
+    printf("Enter the number you want to check in an array : ");
+    scanf("%d", &m);
+    for(i=0; i<n;i++){
+        if(a[i]==m){
+            pos=i+1;
+            count++;
+        }
+    }
+    if(count>0){
+        printf("YES, In the position - %d",pos);
+    }
+    else
+    printf("NO");
+    return 0;
+}
