@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int main(){
+    int x,y,a,m,b,n,total_score;
+    printf("Enter the number of question in EXAM : ");
+    scanf("%d", &y);
+    printf("Enter the number of question Attempt : ");
+    scanf("%d", &x);
+    printf("Enter the number of Correct Questions : ");
+    scanf("%d", &a);
+    printf("Enter the number of Incorrect Questions : ");
+    scanf("%d", &b);
+    printf("Enter the number of points for Correct Questions : ");
+    scanf("%d", &m);
+    printf("Enter the number of points subtracted for InCorrect Questions : ");
+    scanf("%d", &n);
+
+    total_score = (a*m)-(b*n);
+    printf("Your total score is : %d",total_score);
+
+    return 0;
+}
