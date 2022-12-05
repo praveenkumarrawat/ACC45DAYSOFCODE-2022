@@ -1,0 +1,50 @@
+#include <stdio.h>
+#define max 100
+int main()
+{
+    int a[max][max], b[max][max],sum[max][max];
+    int n, i, j, k, r, c;
+    printf("Enter number of ROWS in a matrix : ");
+    scanf("%d", &r);
+    printf("Enter number of COLUMNS in a matrix : ");
+    scanf("%d", &c);
+    // First matrix a.
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            printf("Enter element a[%d][%d] : ", i + 1, j + 1);
+            scanf("%d", &a[i][j]);
+        }
+    }
+    // Second matrix b.
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            printf("Enter element b[%d][%d] : ", i + 1, j + 1);
+            scanf("%d", &b[i][j]);
+        }
+    }
+    // sum of a and b matrix
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            sum[i][j] = a[i][j] + b[i][j];
+        }
+    }
+    printf("Sum of two matrixes\n");
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            printf("%d ",sum[i][j]);
+            if(j==c-1)
+            printf("\n");
+        }
+    }
+
+
+return 0;
+}
