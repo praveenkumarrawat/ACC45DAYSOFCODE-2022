@@ -1,0 +1,44 @@
+#include<stdio.h>
+#define max 100
+int main(){
+    int a[max][max],b[max][max];
+    int i,j,r,c,sum=0;
+
+    printf("Enter row : " );
+    scanf("%d",&r);
+    printf("Enter column : " );
+    scanf("%d",&c);
+    for(i=0; i<r; i++){
+        for(j=0; j<c;j++){
+            printf("Enter a[%d][%d] : ",i+1,j+1);
+            scanf("%d",&a[i][j]);
+        }
+    }
+ 
+    printf("Matrix 1\n");
+    for(i=0; i<r; i++){
+        for(j=0; j<c;j++){
+           printf("%d ",a[i][j]);
+           if(j==c-1){
+
+
+            printf("\n");
+           }
+        }
+    }
+    for(i=0; i<r; i++){
+        for(j=0; j<c;j++){
+            sum=sum+a[i][j];
+        }
+        printf("Sum of ROW(%d) : %d\n",1+i,sum);
+        sum=0;
+    }
+    for(i=0; i<r; i++){
+        for(j=0; j<c;j++){
+            sum=sum+a[j][i];
+        }
+        printf("Sum of COLUMN(%d) : %d\n",1+j,sum);
+        sum=0;
+    }
+    return 0;
+}
